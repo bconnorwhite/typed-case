@@ -8,6 +8,6 @@
     ]
   },
   "files": [
-    "source/camel-case.ts"
+    "source/index.ts"
   ]
 }
