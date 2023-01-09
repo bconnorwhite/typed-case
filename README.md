@@ -39,8 +39,8 @@ A zero-dependency package for converting between string casings in a type-safe w
 | PascalCase           |
 | kebab-case           |
 | snake_case           |
-| CONSTANT_CASE        |
 | Train-Case           |
+| CONSTANT_CASE        |
 | Title Case           |
 | UPPER CASE           |
 | lower case           |
@@ -67,7 +67,8 @@ pnpm add typed-case
   - [TrainCase](#traincase)
   - [KebabCase](#kebabcase)
   - [SnakeCase](#snakecase)
-  - [ScreamingSnakeCase](#screamingsnakecase)
+  - [ConstantCase](#constantcase)
+  - [Title Case](#title-case)
   - [UpperCase, LowerCase](#uppercase-lowercase)
   - [Capitalize, Uncapitalize](#capitalize-uncapitalize)
 - [License](#license)
@@ -112,9 +113,18 @@ toPascalCase("hello WORLD", { preserveUpperCase: false }); // "HelloWorld"
 ```ts
 import { toTrainCase, TrainCase } from "typed-case";
 
-toPTrainCase("hello world"); // "Hello-World"
-toPTrainCase("hello_world"); // "Hello-World"
-toPTrainCase("hello-world"); // "Hello-World"
+toTrainCase("hello world"); // "Hello-World"
+toTrainCase("hello_world"); // "Hello-World"
+toTrainCase("hello-world"); // "Hello-World"
+```
+
+### TitleCase
+
+```ts
+import { toTitleCase, TitleCase } from "typed-case";
+toTitleCase("hello world"); // "Hello World"
+toTitleCase("hello_world"); // "Hello World"
+toTitleCase("hello-world"); // "Hello World"
 ```
 
 #### Preserve UpperCase
