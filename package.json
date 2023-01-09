@@ -1,0 +1,54 @@
+{
+  "name": "typed-case",
+  "version": "0.0.0",
+  "description": "Convert between typesafe string casings",
+  "main": ".auto/build/index.js",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bconnorwhite/typed-case.git"
+  },
+  "keywords": [
+    "case",
+    "type",
+    "safe",
+    "to",
+    "pascal",
+    "snake",
+    "camel",
+    "kebab",
+    "ts",
+    "types"
+  ],
+  "exports": "./.auto/build/index.js",
+  "types": ".auto/build/index.d.ts",
+  "files": [
+    ".auto/build/**/!(tsconfig.tsbuildinfo)"
+  ],
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0"
+  },
+  "scripts": {
+    "build": "auto build",
+    "dev": "auto dev",
+    "lint": "auto lint",
+    "prepack": "yarn build",
+    "release": "auto release",
+    "test": "auto test",
+    "typecheck": "auto typecheck"
+  },
+  "eslintConfig": {
+    "extends": "@autosoft/eslint-config"
+  },
+  "jest": {
+    "preset": "@autosoft/jest-preset"
+  },
+  "npmpackagejsonlint": {
+    "extends": "npm-package-json-lint-config-auto"
+  },
+  "dependencies": {
+    "type-fest": "^3.5.1"
+  }
+}
