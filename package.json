@@ -1,6 +1,6 @@
 {
   "name": "typed-case",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Convert between typesafe string casings",
   "main": ".auto/build/index.js",
   "license": "MIT",
