@@ -47,7 +47,5 @@
   },
   "npmpackagejsonlint": {
     "extends": "npm-package-json-lint-config-auto"
-  },
-  "dependencies": {
   }
 }
