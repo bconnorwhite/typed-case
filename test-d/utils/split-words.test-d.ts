@@ -22,5 +22,3 @@ expectType<SplitWords<"thisIsTEST">>(["this", "Is", "TEST"]);
 expectType<SplitWords<"--thisIsTEST">>(["this", "Is", "TEST"]);
 
 expectType<SplitWords<"--thisIsTEST42">>(["this", "Is", "TEST", "42"]);
-
-type Test = SplitWords<"this IS a Test">;
