@@ -49,6 +49,5 @@
     "extends": "npm-package-json-lint-config-auto"
   },
   "dependencies": {
-    "type-fest": "^3.5.1"
   }
 }
