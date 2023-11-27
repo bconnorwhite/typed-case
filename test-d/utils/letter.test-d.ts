@@ -1,12 +1,12 @@
-import { expectType, expectNotType } from "tsd";
-import { UpperCaseLetter, LowerCaseLetter } from "../../source/utils/letter.js";
+import { expectAssignable, expectNotAssignable } from "tsd";
+import { LowerCaseLetter, UpperCaseLetter } from "../../source/utils/letter.js";
 
 // UpperCaseLetter
 
-expectType<UpperCaseLetter>("A");
-expectNotType<UpperCaseLetter>("a");
+expectAssignable<UpperCaseLetter>("A");
+expectNotAssignable<UpperCaseLetter>("a");
 
 // LowerCaseLetter
 
-expectType<LowerCaseLetter>("a");
-expectNotType<LowerCaseLetter>("A");
+expectAssignable<LowerCaseLetter>("a");
+expectNotAssignable<LowerCaseLetter>("A");
