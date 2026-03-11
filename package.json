@@ -1,6 +1,6 @@
 {
   "name": "typed-case",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Convert between typesafe string casings",
   "license": "MIT",
   "private": false,
