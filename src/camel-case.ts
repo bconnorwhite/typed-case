@@ -20,15 +20,17 @@ export type CamelCaseOptions = {
  * type CamelCaseString = CamelCase<"hello world">; // "helloWorld"
  * ```
  */
-export type CamelCase<T extends string, O extends CamelCaseOptions | undefined = undefined> = SplitWords<T> extends [infer First, ...infer Rest]
-  ? First extends string
-    ? Rest extends string[]
-      ? O extends { preserveConsecutiveUppercase: false }
-        ? JoinWords<[LowerCase<First>, ...CapitalizeAll<LowerCaseAll<Rest>>]>
-        : JoinWords<[LowerCase<First>, ...CapitalizeAll<Rest>]>
-      : T
-    : never
-  : T;
+export type CamelCase<T extends string, O extends CamelCaseOptions | undefined = undefined> = T extends string
+  ? SplitWords<T> extends [infer First, ...infer Rest]
+    ? First extends string
+      ? Rest extends string[]
+        ? O extends { preserveConsecutiveUppercase: false }
+          ? JoinWords<[LowerCase<First>, ...CapitalizeAll<LowerCaseAll<Rest>>]>
+          : JoinWords<[LowerCase<First>, ...CapitalizeAll<Rest>]>
+        : T
+      : never
+    : T
+  : never;
 
 /**
  * Convert a string to camelCase.
