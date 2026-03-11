@@ -117,7 +117,7 @@ toCamelCase("hello-world"); // "helloWorld"
 
 ```ts
 toCamelCase("hello WORLD"); // "helloWORLD"
-toCamelCase("hello WORLD", { preserveUpperCase: false }); // "helloWorld"
+toCamelCase("hello WORLD", { preserveConsecutiveUppercase: false }); // "helloWorld"
 ```
 
 ### PascalCase
@@ -134,7 +134,7 @@ toPascalCase("hello-world"); // "HelloWorld"
 
 ```ts
 toPascalCase("hello WORLD"); // "HelloWORLD"
-toPascalCase("hello WORLD", { preserveUpperCase: false }); // "HelloWorld"
+toPascalCase("hello WORLD", { preserveConsecutiveUppercase: false }); // "HelloWorld"
 ```
 
 ### TrainCase
@@ -159,8 +159,8 @@ toTitleCase("hello-world"); // "Hello World"
 #### Preserve UpperCase
 
 ```ts
-toTrainCase("hello WORLD"); // "Hello-WORLD"
-toTrainCase("hello WORLD", { preserveUpperCase: false }); // "Hello-World"
+toTitleCase("hello WORLD"); // "Hello WORLD"
+toTitleCase("hello WORLD", { preserveConsecutiveUppercase: false }); // "Hello World"
 ```
 
 ### KebabCase
