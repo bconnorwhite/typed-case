@@ -1,5 +1,7 @@
-import { toPascalCase, PascalCase, PascalCaseOptions } from "./pascal-case.js";
-import { toDelimiterCase, DelimiterCase } from "./delimiter-case.js";
+import type { PascalCase, PascalCaseOptions } from "./pascal-case.js";
+import { toPascalCase } from "./pascal-case.js";
+import type { DelimiterCase } from "./delimiter-case.js";
+import { toDelimiterCase } from "./delimiter-case.js";
 
 export type TrainCaseOptions = PascalCaseOptions;
 
@@ -20,5 +22,5 @@ export type TrainCase<T extends string, O extends TrainCaseOptions | undefined =
  * ```
  */
 export function toTrainCase<T extends string, O extends TrainCaseOptions>(string: T, options?: O): TrainCase<T, O> {
-  return toDelimiterCase(toPascalCase(string, options), "-") as TrainCase<T, O>;
+  return toDelimiterCase(toPascalCase(string, options), "-");
 }

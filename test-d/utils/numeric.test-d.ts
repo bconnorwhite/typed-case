@@ -1,5 +1,5 @@
 import { expectAssignable, expectNotAssignable } from "tsd";
-import { Digit } from "../../source/utils/numeric.js";
+import type { Digit } from "../../src/utils/numeric.js";
 
 // Digit
 

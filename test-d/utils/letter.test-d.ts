@@ -1,5 +1,5 @@
 import { expectAssignable, expectNotAssignable } from "tsd";
-import { LowerCaseLetter, UpperCaseLetter } from "../../source/utils/letter.js";
+import type { LowerCaseLetter, UpperCaseLetter } from "../../src/utils/letter.js";
 
 // UpperCaseLetter
 

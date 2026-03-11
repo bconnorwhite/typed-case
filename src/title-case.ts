@@ -1,5 +1,7 @@
-import { toPascalCase, PascalCase, PascalCaseOptions } from "./pascal-case.js";
-import { toDelimiterCase, DelimiterCase } from "./delimiter-case.js";
+import type { PascalCase, PascalCaseOptions } from "./pascal-case.js";
+import { toPascalCase } from "./pascal-case.js";
+import type { DelimiterCase } from "./delimiter-case.js";
+import { toDelimiterCase } from "./delimiter-case.js";
 
 export type TitleCaseOptions = PascalCaseOptions;
 

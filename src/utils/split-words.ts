@@ -1,6 +1,6 @@
-import { IsLowerCase, IsUpperCase } from "./letter.js";
-import { IsDigit } from "./numeric.js";
-import { WordSeparators } from "./word-separators.js";
+import type { IsLowerCase, IsUpperCase } from "./letter.js";
+import type { IsDigit } from "./numeric.js";
+import type { WordSeparators } from "./word-separators.js";
 
 type SkipEmptyWord<Word extends string> = Word extends "" ? [] : [Word];
 
@@ -15,7 +15,7 @@ export type SplitWords<
 > = Sentence extends `${infer FirstCharacter}${infer RemainingCharacters}`
   ? FirstCharacter extends WordSeparators
     // Skip word separator
-    ? [...SkipEmptyWord<CurrentWord>, ...SplitWords<RemainingCharacters, "">]
+    ? [...SkipEmptyWord<CurrentWord>, ...SplitWords<RemainingCharacters>]
     : LastCharacter extends ""
       // Fist char of word
       ? SplitWords<RemainingCharacters, FirstCharacter, FirstCharacter>

@@ -1,5 +1,5 @@
-import { test, expect } from "@jest/globals";
-import { splitWords } from "../../source/utils/split-words.js";
+import { expect, test } from "vitest";
+import { splitWords } from "../../src/utils/split-words.js";
 
 test("splitWords", () => {
   expect(splitWords("helloWorld")).toEqual(["hello", "World"]);

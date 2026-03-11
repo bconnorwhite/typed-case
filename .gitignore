@@ -1,6 +1,6 @@
-.auto
-.turbo
-node_modules
 .DS_Store
-*.txt
-yarn-error.log
+.ignore
+build
+coverage
+node_modules
+package-lock.json

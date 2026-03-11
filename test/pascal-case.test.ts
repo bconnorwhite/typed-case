@@ -1,5 +1,5 @@
-import { test, expect, describe } from "@jest/globals";
-import { toPascalCase } from "../source/pascal-case.js";
+import { test, expect, describe } from "vitest";
+import { toPascalCase } from "../src/pascal-case.js";
 
 describe("toPascalCase", () => {
   test("default", () => {
@@ -35,6 +35,3 @@ describe("toPascalCase", () => {
     expect(toPascalCase("lifeIs42", { preserveConsecutiveUppercase: false })).toEqual("LifeIs42");
   });
 });
-
-
-

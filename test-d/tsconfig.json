@@ -2,13 +2,10 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@bconnorwhite/tsconfig/node",
   "compilerOptions": {
-    "outDir": "build",
-    "rootDir": "src",
-    "rootDirs": [
-      "src"
-    ]
+    "noEmit": true,
+    "rootDir": ".."
   },
-  "files": [
-    "src/index.ts"
+  "include": [
+    "**/*.ts"
   ]
 }

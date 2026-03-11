@@ -1,5 +1,6 @@
-import { SplitWords, JoinWords, splitWords, joinWords } from "./utils/index.js";
-import { WordSeparators } from "./utils/word-separators.js";
+import type { SplitWords, JoinWords } from "./utils/index.js";
+import { splitWords, joinWords } from "./utils/index.js";
+import type { WordSeparators } from "./utils/word-separators.js";
 
 export type DelimiterCase<T extends string, D extends WordSeparators> = SplitWords<T> extends string[]
   ? JoinWords<SplitWords<T>, D>

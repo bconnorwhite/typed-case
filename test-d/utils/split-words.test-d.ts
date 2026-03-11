@@ -1,5 +1,5 @@
 import { expectType } from "tsd";
-import { SplitWords } from "../../source/utils/split-words.js";
+import type { SplitWords } from "../../src/utils/split-words.js";
 
 expectType<SplitWords<"">>([]);
 

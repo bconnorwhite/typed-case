@@ -7,23 +7,15 @@
   <a href="https://github.com/bconnorwhite/typed-case">
     <img alt="TypeScript" src="https://img.shields.io/github/languages/top/bconnorwhite/typed-case.svg">
   </a>
+  <a href="https://coveralls.io/github/bconnorwhite/typed-case?branch=main">
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/bconnorwhite/typed-case/badge.svg?branch=main" />
+  </a>
 </div>
 
 <br />
 
 <blockquote align="center">Convert between typesafe string casings.</blockquote>
 
-<br />
-
-_If I should maintain this repo, please ⭐️_
-<a href="https://github.com/bconnorwhite/typed-case">
-  <img align="right" alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/typed-case?label=%E2%AD%90%EF%B8%8F&style=social">
-</a>
-
-_DM me on [Twitter](https://twitter.com/bconnorwhite) if you have questions or suggestions._
-<a href="https://twitter.com/bconnorwhite">
-  <img align="right" alt="Twitter" src="https://img.shields.io/twitter/url?label=%40bconnorwhite&style=social&url=https%3A%2F%2Ftwitter.com%2Fbconnorwhite">
-</a>
 
 ---
 <!--END HEADER-->
@@ -47,17 +39,54 @@ A zero-dependency package for converting between string casings in a type-safe w
 
 ## Installation
 
-```sh
-yarn add typed-case
-```
+<details open>
+  <summary>
+    <a href="https://www.npmjs.com/package/typed-case">
+      <img src="https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white" alt="NPM" />
+    </a>
+  </summary>
 
 ```sh
 npm install typed-case
 ```
 
+</details>
+
+<details>
+  <summary>
+    <a href="https://yarnpkg.com/package/typed-case">
+      <img src="https://img.shields.io/badge/yarn-2C8EBB?logo=yarn&logoColor=white" alt="Yarn" />
+    </a>
+  </summary>
+
+```sh
+yarn add typed-case
+```
+
+</details>
+
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=white" alt="PNPM" />
+  </summary>
+
 ```sh
 pnpm add typed-case
 ```
+
+</details>
+
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/bun-EE81C3?logo=bun&logoColor=white" alt="Bun" />
+  </summary>
+
+```sh
+bun add typed-case
+```
+
+</details>
+
 
 ## Contents
 
@@ -183,10 +212,7 @@ uncapitalize("Hello world"); // "hello world"
 ```
 
 <!--BEGIN FOOTER-->
-
-<br />
-
 <h2 id="license">License <a href="https://opensource.org/licenses/MIT"><img align="right" alt="license" src="https://img.shields.io/npm/l/typed-case.svg"></a></h2>
 
-[MIT](https://opensource.org/licenses/MIT)
+[MIT](https://opensource.org/licenses/MIT) - _MIT License_
 <!--END FOOTER-->

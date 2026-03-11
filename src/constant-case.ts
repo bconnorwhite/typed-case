@@ -1,5 +1,7 @@
-import { toSnakeCase, SnakeCase } from "./snake-case.js";
-import { toUpperCase, UpperCase } from "./upper-case.js";
+import type { SnakeCase } from "./snake-case.js";
+import { toSnakeCase } from "./snake-case.js";
+import type { UpperCase } from "./upper-case.js";
+import { toUpperCase } from "./upper-case.js";
 
 /**
  * Convert a string type to CONSTANT_CASE.

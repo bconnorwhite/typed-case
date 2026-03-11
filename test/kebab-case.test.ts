@@ -1,5 +1,5 @@
-import { test, expect } from "@jest/globals";
-import { toKebabCase } from "../source/kebab-case.js";
+import { test, expect } from "vitest";
+import { toKebabCase } from "../src/kebab-case.js";
 
 test("toKebabCase", () => {
   expect(toKebabCase("")).toEqual("");

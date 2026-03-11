@@ -1,5 +1,5 @@
-import { test, expect } from "@jest/globals";
-import { toConstantCase } from "../source/constant-case.js";
+import { test, expect } from "vitest";
+import { toConstantCase } from "../src/constant-case.js";
 
 test("toSnakeCase", () => {
   expect(toConstantCase("")).toEqual("");

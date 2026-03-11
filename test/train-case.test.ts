@@ -1,5 +1,5 @@
-import { test, expect, describe } from "@jest/globals";
-import { toTrainCase } from "../source/train-case.js";
+import { test, expect, describe } from "vitest";
+import { toTrainCase } from "../src/train-case.js";
 
 describe("toTrainCase", () => {
   test("default", () => {

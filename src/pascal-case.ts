@@ -1,4 +1,5 @@
-import { toCamelCase, CamelCase, CamelCaseOptions } from "./camel-case.js";
+import type { CamelCase, CamelCaseOptions } from "./camel-case.js";
+import { toCamelCase } from "./camel-case.js";
 import { capitalize } from "./capitalize.js";
 
 export type PascalCaseOptions = CamelCaseOptions;
@@ -20,5 +21,5 @@ export type PascalCase<T extends string, Options extends PascalCaseOptions | und
  * ```
  */
 export function toPascalCase<T extends string, O extends PascalCaseOptions>(string: T, options?: O): PascalCase<T, O> {
-  return capitalize(toCamelCase(string, options)) as PascalCase<T, O>;
+  return capitalize(toCamelCase(string, options));
 }

@@ -1,5 +1,5 @@
-import { test, expect } from "@jest/globals";
-import { toLowerCase } from "../source/lower-case.js";
+import { test, expect } from "vitest";
+import { toLowerCase } from "../src/lower-case.js";
 
 test("toLowerCase", () => {
   expect(toLowerCase("helloWorld")).toEqual("helloworld");

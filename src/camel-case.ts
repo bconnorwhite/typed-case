@@ -1,6 +1,9 @@
-import { SplitWords, JoinWords, splitWords, joinWords } from "./utils/index.js";
-import { LowerCase, toLowerCase, LowerCaseAll } from "./lower-case.js";
-import { CapitalizeAll, capitalize } from "./capitalize.js";
+import type { SplitWords, JoinWords } from "./utils/index.js";
+import { splitWords, joinWords } from "./utils/index.js";
+import type { LowerCase, LowerCaseAll } from "./lower-case.js";
+import { toLowerCase } from "./lower-case.js";
+import type { CapitalizeAll } from "./capitalize.js";
+import { capitalize } from "./capitalize.js";
 
 export type CamelCaseOptions = {
   /**
@@ -34,10 +37,13 @@ export type CamelCase<T extends string, O extends CamelCaseOptions | undefined =
  * const camelCaseString = toCamelCase("hello world"); // "helloWorld"
  * ```
  */
-export function toCamelCase<T extends string, O extends CamelCaseOptions>(string: T, options?: O): CamelCase<T> {
+export function toCamelCase<T extends string, O extends CamelCaseOptions | undefined = undefined>(
+  string: T,
+  options?: O
+): CamelCase<T, O> {
   const words = splitWords(string).map((segment, index) => {
     const base = options?.preserveConsecutiveUppercase === false ? toLowerCase(segment) : segment;
     return index === 0 ? toLowerCase(base) : capitalize(base);
   });
-  return joinWords(words) as CamelCase<T>;
+  return joinWords(words) as CamelCase<T, O>;
 }

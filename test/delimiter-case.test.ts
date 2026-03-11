@@ -1,5 +1,5 @@
-import { test, expect } from "@jest/globals";
-import { toDelimiterCase } from "../source/delimiter-case.js";
+import { test, expect } from "vitest";
+import { toDelimiterCase } from "../src/delimiter-case.js";
 
 test("toDelimiterCase", () => {
   expect(toDelimiterCase("", ".")).toEqual("");

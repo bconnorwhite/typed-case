@@ -1,5 +1,7 @@
-import { toDelimiterCase, DelimiterCase } from "./delimiter-case.js";
-import { toLowerCase, LowerCase } from "./lower-case.js";
+import type { DelimiterCase } from "./delimiter-case.js";
+import { toDelimiterCase } from "./delimiter-case.js";
+import type { LowerCase } from "./lower-case.js";
+import { toLowerCase } from "./lower-case.js";
 
 /**
  * Convert a string type to kebab-case.

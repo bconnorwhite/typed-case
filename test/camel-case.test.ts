@@ -1,5 +1,5 @@
-import { test, expect, describe } from "@jest/globals";
-import { toCamelCase } from "../source/camel-case.js";
+import { test, expect, describe } from "vitest";
+import { toCamelCase } from "../src/camel-case.js";
 
 describe("toCamelCase", () => {
   test("default", () => {
@@ -35,6 +35,3 @@ describe("toCamelCase", () => {
     expect(toCamelCase("lifeIs42", { preserveConsecutiveUppercase: false })).toEqual("lifeIs42");
   });
 });
-
-
-

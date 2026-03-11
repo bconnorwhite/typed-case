@@ -1,5 +1,5 @@
-import { test, expect, describe } from "@jest/globals";
-import { toTitleCase } from "../source/title-case.js";
+import { test, expect, describe } from "vitest";
+import { toTitleCase } from "../src/title-case.js";
 
 describe("toTitleCase", () => {
   test("default", () => {
