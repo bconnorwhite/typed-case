@@ -85,6 +85,10 @@ jobs:
             git commit -m "${{ steps.version.outputs.tag }}"
           fi
 
+      - name: Get release commit SHA
+        id: release_commit
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
       - name: Create tag
         run: git tag -a "${{ steps.version.outputs.tag }}" -m "${{ steps.version.outputs.tag }}"
 
@@ -92,6 +96,15 @@ jobs:
         run: |
           git push origin HEAD:${{ github.event.repository.default_branch }}
           git push origin "${{ steps.version.outputs.tag }}"
+
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ github.token }}
+          git-branch: ${{ github.event.repository.default_branch }}
+          git-commit: ${{ steps.release_commit.outputs.sha }}
+          file: coverage/lcov.info
+          fail-on-error: false
 
       - name: Publish to npm
         run: npm publish
