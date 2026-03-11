@@ -14,7 +14,7 @@
 
 <br />
 
-<blockquote align="center">Convert between typesafe string casings.</blockquote>
+<blockquote align="center">Convert between type-safe string casings.</blockquote>
 
 
 ---
