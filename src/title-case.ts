@@ -12,7 +12,7 @@ export type TitleCaseOptions = PascalCaseOptions;
  * type TitleCaseString = TitleCase<"hello world">; // "Hello World"
  * ```
  */
-export type TitleCase<T extends string, O extends TitleCaseOptions | undefined = undefined> = DelimiterCase<PascalCase<T, O>, "-">;
+export type TitleCase<T extends string, O extends TitleCaseOptions | undefined = undefined> = DelimiterCase<PascalCase<T, O>, " ">;
 
 /**
  * Convert a string to Title Case.

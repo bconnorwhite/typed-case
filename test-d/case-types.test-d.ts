@@ -5,6 +5,7 @@ import {
 import type {
   CamelCase,
   PascalCase,
+  TitleCase,
   TrainCase
 } from "../src/index.js";
 
@@ -24,3 +25,10 @@ expectAssignable<TrainCase<Foo>>("Foo-Bar");
 expectAssignable<TrainCase<Foo>>("Baz-Qux");
 expectNotAssignable<TrainCase<Foo>>("Foo-Qux");
 expectNotAssignable<TrainCase<Foo>>("Baz-Bar");
+
+expectAssignable<TitleCase<Foo>>("Foo Bar");
+expectAssignable<TitleCase<Foo>>("Baz Qux");
+expectNotAssignable<TitleCase<Foo>>("Foo-Bar");
+expectNotAssignable<TitleCase<Foo>>("Foo Qux");
+expectNotAssignable<TitleCase<Foo>>("Baz-Qux");
+expectNotAssignable<TitleCase<Foo>>("Baz Bar");
