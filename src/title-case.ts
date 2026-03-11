@@ -22,5 +22,5 @@ export type TitleCase<T extends string, O extends TitleCaseOptions | undefined =
  * ```
  */
 export function toTitleCase<T extends string, O extends TitleCaseOptions>(string: T, options?: O): TitleCase<T, O> {
-  return toDelimiterCase(toPascalCase(string, options), " ") as TitleCase<T, O>;
+  return toDelimiterCase(toPascalCase(string, options), " ");
 }

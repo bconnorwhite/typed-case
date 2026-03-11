@@ -13,6 +13,14 @@ export type CamelCaseOptions = {
   preserveConsecutiveUppercase?: boolean;
 };
 
+type PreserveConsecutiveUppercase<O extends CamelCaseOptions | undefined> = O extends undefined
+  ? true
+  : O extends { preserveConsecutiveUppercase?: infer PreserveUppercase }
+    ? PreserveUppercase extends false
+      ? false
+      : true
+    : true;
+
 /**
  * Convert a string type to camelCase.
  * @example
@@ -24,7 +32,7 @@ export type CamelCase<T extends string, O extends CamelCaseOptions | undefined =
   ? SplitWords<T> extends [infer First, ...infer Rest]
     ? First extends string
       ? Rest extends string[]
-        ? O extends { preserveConsecutiveUppercase: false }
+        ? PreserveConsecutiveUppercase<O> extends false
           ? JoinWords<[LowerCase<First>, ...CapitalizeAll<LowerCaseAll<Rest>>]>
           : JoinWords<[LowerCase<First>, ...CapitalizeAll<Rest>]>
         : T

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@bconnorwhite/tsconfig/node",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "..",
+    "strict": false,
+    "strictNullChecks": false
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
