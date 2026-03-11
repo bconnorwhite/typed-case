@@ -55,7 +55,7 @@
     "typecheck": "npm run build && tsc --project ./test/tsconfig.json && tsc --project ./test-d/tsconfig.json && tsc --project ./test-d-nonstrict/tsconfig.json && tsd"
   },
   "devDependencies": {
-    "@bconnorwhite/eslint-config": "^1.0.0",
+    "@bconnorwhite/eslint-config": "^1.1.0",
     "@bconnorwhite/tsconfig": "^1.0.0",
     "@types/node": "^24.3.0",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
