@@ -27,6 +27,6 @@ export type UpperCaseAll<T extends string[]> = T extends [infer First, ...infer 
     : never
   : [];
 
-export function toLowerCaseAll<T extends string[]>(strings: T): UpperCase<T[number]>[] {
+export function toUpperCaseAll<T extends string[]>(strings: T): UpperCase<T[number]>[] {
   return strings.map((string) => toUpperCase(string));
 }
